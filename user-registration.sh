@@ -6,13 +6,21 @@ read -p "Enter Last name :- " lastName
 lastNamePattern="^([A-Z]{1})+([A-Za-z0-9]{2,})"
 if [[ $firstName =~ $firstNamePattern ]]
 then
-	echo "valid"
+	echo "Valid first name"
 else
-	echo "not valid"
+	echo "not valid name"
 fi
 if [[ $lastName =~ $lastNamePattern ]]
 then
-	echo "valid"
+	echo "valid last name"
 else
-	echo "not valid"
+	echo "not valid name"
+fi
+read -p "Enter email to validate :- " email
+email_Pattern="^([a-z])+([_,+,-,.])?([a-z])?([@])?([a-z])+([.])+([a-z])+([.][a-z]{2})?$"
+if [[ $email =~ $email_Pattern ]]
+then
+   echo "Valid email address"
+else
+   echo "Invalid email address"
 fi
