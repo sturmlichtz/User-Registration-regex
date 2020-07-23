@@ -31,9 +31,6 @@ then
 	echo "valid phone no."
 else
 	echo "not a valid phone no."
-	echo "Valid first name"
-else
-	echo "not valid name"
 fi
 if [[ $lastName =~ $lastNamePattern ]]
 then
@@ -48,4 +45,13 @@ then
    echo "Valid email address"
 else
    echo "Invalid email address"
+fi
+
+read -p "Enter password :- " password
+passwordPattern="([A-Za-z0-9]{8,})"
+if [[ $password =~ $passwordPattern ]]
+then
+	echo "Valid password"
+else
+	echo "not a valid password"
 fi
