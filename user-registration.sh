@@ -48,7 +48,7 @@ else
 fi
 
 read -p "Enter password :- " password
-if [[ ${#password} -ge 8 && "$password"==[[:lower:]]+ && "$password"==[[:upper:]]+ && $password =~ [0-9] ]]
+if [[ ${#password} -ge 8 && "$password"==[[:lower:]]+ && "$password"==[[:upper:]]+ && $password =~ [0-9] && $password =~ ['!''@''#''$''%''^''&''*'] ]]
 then
 	echo "valid password"
 else
