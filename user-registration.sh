@@ -38,6 +38,7 @@ then
 else
 	echo "not valid name"
 fi
+#all email samples cleared 
 read -p "Enter email to validate :- " email
 email_Pattern="^([a-z])+([_,+,-,.])?([a-z])?([@])?([a-z])+([.])+([a-z])+([.][a-z]{2})?$"
 if [[ $email =~ $email_Pattern ]]
